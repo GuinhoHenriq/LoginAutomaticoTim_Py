@@ -155,7 +155,7 @@ class File:
         try:
             sucess = 1
             if user.Usuario.login[0] != 'Error':
-                source = r'\\tmkt-zl-fs01.tmktope.servicos.mkt\sementes$' + '\\' + user.Usuario.login[0] + '*.sdtid' #caminho origem
+                source = r'\\' + user.Usuario.ip + '\C:\\' +  user.Usuario.login[0] + '*.sdtid' #caminho origem
                 destination = r'\\' + user.Usuario.ip + '\c$\SEMENTE' #caminho destino
                 command = 'copy ' + source + ' ' + destination 
                 sucess = cmd.system(command)
